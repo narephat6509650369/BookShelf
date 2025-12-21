@@ -1,4 +1,3 @@
-
 * {
     margin: 0;
     padding: 0;
@@ -7,7 +6,7 @@
 
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background: linear-gradient(135deg, #e0e0e0 0%, #f5f5f5 100%);
+    background: linear-gradient(135deg, #EDD0C0 0%, #B3C0AE 100%);
     overflow-x: hidden;
 }
 
@@ -30,7 +29,7 @@ nav {
 .logo-icon {
     width: 45px;
     height: 45px;
-    background: #000;
+    background: #C8626D;
     border-radius: 50%;
     display: flex;
     align-items: center;
@@ -51,6 +50,7 @@ nav {
     font-size: 0.9rem;
     font-weight: 600;
     letter-spacing: 0.5px;
+    color: #4a4a4a;
 }
 
 .nav-links {
@@ -61,7 +61,7 @@ nav {
 
 .nav-links a {
     text-decoration: none;
-    color: #333;
+    color: #4a4a4a;
     font-size: 0.95rem;
     font-weight: 500;
     transition: color 0.3s;
@@ -70,7 +70,7 @@ nav {
 }
 
 .nav-links a:hover {
-    color: #000;
+    color: #C8626D;
 }
 
 /* Mobile Menu */
@@ -89,7 +89,7 @@ nav {
 .menu-toggle span {
     width: 30px;
     height: 3px;
-    background: #000;
+    background: #C8626D;
     transition: 0.3s;
 }
 
@@ -107,7 +107,7 @@ nav {
     font-size: 0.95rem;
     letter-spacing: 3px;
     text-transform: uppercase;
-    color: #666;
+    color: #BC8880;
     margin-bottom: 1.5rem;
     font-weight: 500;
 }
@@ -117,12 +117,12 @@ nav {
     font-weight: 700;
     line-height: 1.1;
     margin-bottom: 2rem;
-    color: #000;
+    color: #4a4a4a;
 }
 
 .hero-description {
     font-size: 1.05rem;
-    color: #555;
+    color: #666;
     line-height: 1.7;
     margin-bottom: 3rem;
     max-width: 450px;
@@ -148,7 +148,7 @@ nav {
     background: white;
     padding: 20px;
     border-radius: 20px;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    box-shadow: 0 10px 30px rgba(200, 98, 109, 0.15);
     width: 300px;
 }
 
@@ -168,10 +168,11 @@ nav {
 .book-title {
     font-size: 1.5rem;
     margin-bottom: 5px;
+    color: #4a4a4a;
 }
 
 .book-author {
-    color: #666;
+    color: #BC8880;
     margin-bottom: 5px;
 }
 
@@ -182,10 +183,11 @@ nav {
     padding: 10px;
     border-radius: 50%;
     transition: background 0.3s;
+    color: #C8626D;
 }
 
 .nav-btn:hover {
-    background: rgba(0,0,0,0.05);
+    background: rgba(200, 98, 109, 0.1);
 }
 
 /* Decorative */
@@ -195,8 +197,9 @@ nav {
     top: 20%;
     width: 70px;
     height: 400px;
-    background: #d0d0d0;
+    background: #B3C0AE;
     z-index: 1;
+    opacity: 0.7;
 }
 
 .deco-box-right {
@@ -205,8 +208,9 @@ nav {
     top: 20%;
     width: 70px;
     height: 400px;
-    background: #d0d0d0;
+    background: #BC8880;
     z-index: 1;
+    opacity: 0.7;
 }
 
 /* Responsive */
@@ -233,6 +237,132 @@ nav {
         justify-content: center;
         align-items: center;
         transition: right 0.3s;
-        box-shadow: -5px 0 15px rgba(0,0,0,0.1);
+        box-shadow: -5px 0 15px rgba(200, 98, 109, 0.1);
     }
+}
+
+.allbook-container {
+  padding: 4rem;
+  max-width: 1400px;
+  margin: 0 auto;
+  background: linear-gradient(135deg, #EDD0C0 0%, #B3C0AE 100%);
+  min-height: 100vh;
+}
+
+.allbook-container h2 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  color: #4a4a4a;
+  font-weight: 700;
+}
+
+.allbook-container p {
+  font-size: 1.1rem;
+  color: #666;
+  margin-bottom: 3rem;
+}
+
+.books-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 2rem;
+}
+
+.book-card {
+  background: white;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(200, 98, 109, 0.1);
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.book-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 24px rgba(200, 98, 109, 0.2);
+}
+
+.book-card img {
+  width: 100%;
+  height: 320px;
+  object-fit: cover;
+}
+
+.book-card-content {
+  padding: 1.5rem;
+}
+
+.book-card h3 {
+  font-size: 1.1rem;
+  margin-bottom: 0.5rem;
+  color: #4a4a4a;
+  font-weight: 600;
+  line-height: 1.4;
+  min-height: 2.8rem;
+}
+
+.book-card .author {
+  color: #BC8880;
+  font-size: 0.9rem;
+  margin-bottom: 0.5rem;
+}
+
+.book-card .pages {
+  color: #999;
+  font-size: 0.85rem;
+  margin-bottom: 1rem;
+}
+
+.status-badge {
+  display: inline-block;
+  padding: 5px 14px;
+  color: white;
+  border-radius: 20px;
+  font-size: 0.75rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  min-width: 90px;
+  text-align: center;
+}
+
+/* Status Colors */
+.status-finished {
+  background: #B3C0AE;
+}
+
+.status-reading {
+  background: #C8626D;
+}
+
+.status-toread {
+  background: #BC8880;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .allbook-container {
+    padding: 2rem 1.5rem;
+  }
+
+  .allbook-container h2 {
+    font-size: 2rem;
+  }
+
+  .books-grid {
+    grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+    gap: 1.5rem;
+  }
+
+  .book-card img {
+    height: 240px;
+  }
+
+  .book-card-content {
+    padding: 1rem;
+  }
+
+  .book-card h3 {
+    font-size: 0.95rem;
+  }
 }

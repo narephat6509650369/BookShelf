@@ -1,11 +1,10 @@
 // src/app/app.ts
 import { Component } from '@angular/core';
-// ลบ RouterOutlet ออกถ้ายังไม่ใช้
-// import { RouterOutlet } from '@angular/router'; 
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-root',
-  imports: [], // ลบ RouterOutlet ออกจากตรงนี้ด้วย
+  imports: [CommonModule], // เพิ่ม CommonModule เข้ามา
   templateUrl: './app.html',
   styleUrl: './app.css'
 })
@@ -103,7 +102,7 @@ export class AppComponent {
       author: 'George Orwell',
       cover: '/images/animalfarm.jpg',
       status: 'Currently Reading',
-      pages: 192
+      pages: 480
     },
     {
       title: 'ชีวิตเรามีแค่สี่พันสัปดาห์',
@@ -158,7 +157,7 @@ export class AppComponent {
       title: 'A Little Life',
       author: 'Hanya Yanagihara',
       cover: '/images/alittlelife.jpg',
-      status: 'To Read',
+      status: 'Currently Reading',
       pages: 832
     },
     {
@@ -182,7 +181,6 @@ export class AppComponent {
       status: 'finished',
       pages: 368
     }
-
   ];
 
   get currentBook() {
@@ -205,5 +203,13 @@ export class AppComponent {
     this.currentBookIndex = this.currentBookIndex === 0 
       ? this.finishedBooks.length - 1 
       : this.currentBookIndex - 1;
+  }
+
+  getStatusClass(status: string): string {
+    const statusLower = status.toLowerCase();
+    if (statusLower === 'finished') return 'status-finished';
+    if (statusLower === 'currently reading') return 'status-reading';
+    if (statusLower === 'to read') return 'status-toread';
+    return '';
   }
 }
