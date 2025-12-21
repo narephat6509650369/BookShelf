@@ -5,11 +5,17 @@
       "src": "package.json",
       "use": "@vercel/static-build",
       "config": {
-        "distDir": "dist/bookshelf/browser"
+        "distDir": "dist/BookShelf/browser"
       }
     }
   ],
   "routes": [
+    {
+      "src": "/(.*\\.(css|js|png|jpg|jpeg|webp|svg|ico|woff|woff2|ttf|eot))",
+      "headers": {
+        "cache-control": "public, max-age=31536000, immutable"
+      }
+    },
     {
       "src": "/(.*)",
       "dest": "/index.html"
