@@ -180,6 +180,13 @@ export class AppComponent {
       cover: '/images/everythingiknowaboutlove.jpg',
       status: 'finished',
       pages: 368
+    },
+    {
+      title: 'เดนดาว NEVER DIE',
+      author: 'จิตจงกล',
+      cover: '/images/naverdie.jpg',
+      status: 'finished',
+      pages: 369
     }
   ];
 
